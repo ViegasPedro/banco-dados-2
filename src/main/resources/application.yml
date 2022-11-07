@@ -1,0 +1,21 @@
+spring:
+   cache:
+      type: redis
+   redis:
+      port: 6379
+      host: localhost
+   datasource:
+      driver-class-name: org.postgresql.Driver
+      url: jdbc:postgresql://localhost:5432/bd2
+      username: postgres
+      password: root
+      
+   jpa:
+      hibernate:
+         ddl-auto: update
+      properties:
+         hibernate:
+            dialect: org.hibernate.dialect.PostgreSQL95Dialect
+            jdbc:
+               lob:
+                  non_contextual_creation: true
